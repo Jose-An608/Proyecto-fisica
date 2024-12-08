@@ -55,9 +55,10 @@ def calcular_variables():
     periodo = float(input("Periodo (s): "))
     tiempo = float(input("Tiempo (s): "))
     
-    omega = 2 * math.pi / periodo
+
     calculadora = CalculadoraMAS(amplitud=amplitud, periodo=periodo)
-    
+    calculadora.omega = 2 * math.pi / periodo  # Calcular omega
+
     variables = calculadora.calcular_variables(tiempo)
     
     if variables:
